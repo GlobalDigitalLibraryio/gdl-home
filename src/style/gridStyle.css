@@ -1,0 +1,53 @@
+#grid {
+  max-width: 1060px;
+  width: 100vw;
+}
+
+.pageContent {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 70px 30px;
+}
+
+table {
+  border: 1px solid #e3e3e3;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+th,
+td {
+  padding: 20px;
+  border: 1px solid #e3e3e3;
+  border-collapse: collapse;
+}
+th:first-child,
+td:first-child {
+  padding-left: 20px;
+}
+
+.blogContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 70px 30px;
+  line-height: 1.7;
+  font-size: 1rem;
+  font-family: Lato, Roboto, sans-serif;
+}
+@media (min-width: 960px) {
+  .blogContainer {
+    padding: 50px 120px;
+  }
+  .pageContent {
+    padding: 50px 120px;
+  }
+}
+
+#h1 {
+  font-weight: 600;
+  font-size: 2.6rem;
+  margin-bottom: 20px;
+}

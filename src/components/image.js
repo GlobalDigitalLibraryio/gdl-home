@@ -1,6 +1,7 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import { maxWidth } from "@material-ui/system"
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -13,7 +14,26 @@ import Img from "gatsby-image"
  * - `StaticQuery`: https://gatsby.dev/staticquery
  */
 
-const Image = () => (
+export const Image = () => (
+  <StaticQuery
+    query={graphql`
+      query {
+        placeholderImage: file(relativePath: { eq: "cover.png" }) {
+          childImageSharp {
+            fluid(maxWidth: 300) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <Img fluid={data.placeholderImage.childImageSharp.fluid} alt="logo" />
+    )}
+  />
+)
+/*
+export const Logo = () => (
   <StaticQuery
     query={graphql`
       query {
@@ -28,5 +48,22 @@ const Image = () => (
     `}
     render={data => <Img fluid={data.placeholderImage.childImageSharp.fluid} />}
   />
-)
-export default Image
+)/*
+
+/*export const Logo = () => (
+  <StaticQuery
+    query={graphql`
+    query {
+      placeholderImage: file(relativePath: {eq: "images/gatsby-icon.png}) {
+        childImageSharp {
+          fluid(maxWidth: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+
+  `}
+    render={data => <Img fluid={data.placeholderImage.childImageSharp.fluid} />}
+  />
+)*/
