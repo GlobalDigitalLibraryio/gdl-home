@@ -1,5 +1,4 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
 import { makeStyles } from "@material-ui/core/styles"
 
@@ -18,17 +17,9 @@ import {
 import MenuIcon from "@material-ui/icons/Menu"
 
 import gdlLogo from "../images/GDL-logo.svg"
-import "../style/linkStyle.css"
+import "../style/headerStyle.css"
 
-const drawerWidth = 240
 const useStyles = makeStyles(theme => ({
-  root: {
-    display: "flex",
-    owerflowX: "hidden",
-  },
-  title: {
-    flexGrow: 1,
-  },
   logo: {
     marginTop: 2,
     marginBottom: 0,
@@ -36,21 +27,9 @@ const useStyles = makeStyles(theme => ({
     width: 100,
     marginLeft: 15,
   },
-  btn: {
-    minWidth: 0,
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
-  list: {
-    width: 250,
-  },
-  fullList: {
-    width: "auto",
-  },
 }))
 
-export default function Header(props) {
+export default function Header() {
   const classes = useStyles()
   const [state, setState] = React.useState({
     left: false,
@@ -70,10 +49,10 @@ export default function Header(props) {
 
   const sideList = side => (
     <div
-      className={classes.list}
       role="presentation"
       onClick={toggleDrawer(side, false)}
       onKeyDown={toggleDrawer(side, false)}
+      style={{ width: 250 }}
     >
       <List>
         <a className="smlHeaderLink" href="/">
@@ -92,7 +71,10 @@ export default function Header(props) {
           </ListItem>
         </a>
 
-        <a className="smlHeaderLink" href="/contact">
+        <a
+          className="smlHeaderLink"
+          href="https://digitallibrary.zendesk.com/hc/en-us/requests/new"
+        >
           <ListItem button key="contactBtn">
             <ListItemText primary="Contact" />
           </ListItem>
@@ -108,9 +90,7 @@ export default function Header(props) {
   )
 
   return (
-    /* <div className={classes.root}> */
-    /*  */
-    <div>
+    <>
       <AppBar
         id="appBarBig"
         style={{ background: "#0277bd" }}
@@ -125,25 +105,17 @@ export default function Header(props) {
               alt="logo"
             />
           </Link>
-          <Typography variant="h6" className={classes.title}></Typography>
+          <Typography variant="h6" style={{ flexGrow: 1 }}></Typography>
           <a
             className={
               window.location.href.endsWith("/") ? "active" : "headerLink"
             }
             href="/"
           >
-            <Button className="btn active" color="inherit">
-              Home
-            </Button>
+            <Button color="inherit">Home</Button>
           </a>
           <a className="headerLink" href="/">
-            <Button
-              className="btn"
-              color="inherit"
-              //onClick={() => setActiveClass("blogBtn")}
-            >
-              Blog
-            </Button>
+            <Button color="inherit">Blog</Button>
           </a>
           <a
             className={
@@ -151,19 +123,13 @@ export default function Header(props) {
             }
             href="/about"
           >
-            <Button className="btn" color="inherit">
-              About
-            </Button>
+            <Button color="inherit">About</Button>
           </a>
           <a
-            className={
-              window.location.href.endsWith("contact") ? "active" : "headerLink"
-            }
-            href="/contact"
+            className="headerLink"
+            href="https://digitallibrary.zendesk.com/hc/en-us/requests/new"
           >
-            <Button className="btn" color="inherit">
-              Contact
-            </Button>
+            <Button color="inherit">Contact</Button>
           </a>
           <a
             className={
@@ -173,18 +139,16 @@ export default function Header(props) {
             }
             href="/gdl-in-the-news"
           >
-            <Button className="btn" color="inherit">
-              GDL in the news
-            </Button>
+            <Button color="inherit">GDL in the news</Button>
           </a>
         </Toolbar>
       </AppBar>
 
-      <div id="appBarSmall">
+      <>
         <AppBar
           id="appBarSmall"
           style={{ background: "#0277bd" }}
-          position="fixed"
+          position="static"
         >
           <Toolbar>
             <IconButton color="inherit" onClick={toggleDrawer("left", true)}>
@@ -207,25 +171,7 @@ export default function Header(props) {
         >
           {sideList("left")}
         </SwipeableDrawer>
-      </div>
-    </div>
+      </>
+    </>
   )
-}
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-function setActiveClass(current) {
-  console.log(window.location.href)
-  const url = "" + window.location.href
-
-  if (url.includes("about")) {
-  }
-
-  console.log(url.includes("about"))
 }

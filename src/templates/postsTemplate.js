@@ -7,6 +7,7 @@ import Main from "../elements/Main"
 import "../style/gridStyle.css"
 import rehypeReact from "rehype-react"
 import { Typography } from "@material-ui/core"
+import BackButton from "../components/backButton"
 
 function H1(props) {
   return (
@@ -15,29 +16,24 @@ function H1(props) {
     </Typography>
   )
 }
+function H2(props) {
+  return (
+    <Typography id="h2" variant="h5">
+      {props.children}
+    </Typography>
+  )
+}
+function H3(props) {
+  return (
+    <Typography id="h3" variant="h5">
+      {props.children}
+    </Typography>
+  )
+}
 
 const renderAst = new rehypeReact({
   createElement: React.createElement,
-  components: { h1: H1 },
-  /*  h2= <Typography css={styles.h2} variant="h5" />,
-    h3: (props: any) => <Typography {...props} css={styles.h3} variant="h5" />,
-    button: (props: any) => {
-      const isCover = props.hasOwnProperty('invert');
-      return (
-        <SafeButton
-          {...props}
-          css={isCover ? styles.coverButton : styles.button}
-        />
-      );
-    },
-
-    p: Paragraph,
-    cover: Cover,
-    section: Section,
-    grid: Grid,
-    griditem: GridItem,
-    gridheader: GridHeader
-  }  }, */
+  components: { h1: H1, h2: H2, h3: H3 },
 }).Compiler
 
 export default function Template({ data }) {
@@ -68,16 +64,10 @@ export default function Template({ data }) {
         }}
       >
         <Main>
-          <div className="blogContainer">
+          <div className="postContainer">
             {" "}
-            {/*  <h1>{post.frontmatter.title}</h1>{" "} */}
             {renderAst(post.htmlAst)}
-            {/* <div
-              className="blog-post-content"
-              dangerouslySetInnerHTML={{ __html: post.htmlAst }}
-            />{" "} */}
-            <div></div>
-            <button>Back</button>
+            <BackButton />
           </div>
         </Main>
       </main>
@@ -94,7 +84,6 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
-        author
       }
     }
   }

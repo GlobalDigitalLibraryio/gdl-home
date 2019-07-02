@@ -2,28 +2,27 @@
 path: "/about"
 date: "2019-09-04"
 title: "About the Global Digital Library"
-author: Olivier
 description: "The GDL collects high quality reading resources, and make them available on web, mobile and for print.  By the end of 2018 the Library will offer resources in at least 25 languages, and by end 2020 at least 100 languages."
 showOnFrontPage: true
 ---
 
-##INTRODUCTION
+#Introduction
 
 Major progress has been made towards increasing primary school enrolment rates. Still, 617 million children and adolescents worldwide are unable to read, despite most of them having attended school for several years. One reason for this is that many do not have access to quality early grade reading resources in a language they understand.
 
 The goal of the Global Book Alliance is therefore to provide access to free, high-quality, early grade reading resources in languages that children use and understand. As a flagship activity within the [Global Book Alliance](http://globalbookalliance.org), the Global Digital Library (GDL) has been developed to increase the availability of high-quality reading resources in underserved languages worldwide. “Underserved languages” refer to languages where there is currently a lack of quality early grade reading resources. “Reading resources” refer primarily to reading instruction books and storybooks for leisure reading, but the GDL will also link to some more interactive resources, such as literacy games.
 
-### WHAT IS THE PURPOSE OF THE GLOBAL DIGITAL LIBRARY?
+## What is the purpose of the Global Digital Library?
 
 The GDL collects existing high quality open educational reading resources, and makes them available on web, mobile and for print. By the end of 2019 the Library will offer resources in at least 45 languages, and by end 2020 at least 100 languages.
 
 The platform also facilitates translation and localization of GDL-resources to more than 300 languages.
 
-### WHO CAN USE THE GLOBAL DIGITAL LIBRARY?
+## Who can use the Global Digital Library?
 
 The GDL is aimed at many different types of users and the platform will be open for everyone. Intended users include ministries of education, school managers, teachers, donor agencies and their implementing partners, international and national non-governmental organizations, local publishers, digital distributors and content providers, and households in developing countries.
 
-### WHO IS BEHIND THE GLOBAL DIGITAL LIBRARY?
+## Who is behind the Global Digital Library?
 
 The GDL-platform is a collaborative endeavor which will require involvement from a broad spectrum of stakeholders in order to be truly successful and widely used. It is being built based on existing quality learning resources provided from a variety of initiatives. The content pool will expand over time through discovery and sharing or more existing quality content, translations and localizations of the platform’s content, as well as additions of newly created content. The Platform will be designed both for direct use by a variety of user groups and for integration with existing initiatives in the field.
 

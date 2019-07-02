@@ -2,7 +2,6 @@
 path: "/booksprint"
 date: "2019-09-04"
 title: "GDL translation book sprint"
-author: Olivier
 description: ""
 showOnFrontPage: true
 ---

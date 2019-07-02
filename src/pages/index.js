@@ -92,56 +92,55 @@ export default function Index({ data }) {
           </Cover>
           <br></br>
           <Grid container spacing={4}>
-            {posts
-              /* .filter(post => post.frontmatter.title.length > 0) */
-              .map(({ node: post }) => (
-                <Grid item key={post.frontmatter.title} xs={12} md={6}>
-                  <CardActionArea
-                    component="a"
-                    href={post.frontmatter.path}
-                    style={{
-                      boxShadow: "0px 0px 30px 0px rgba(0, 0, 0, 0.1)",
-                      height: "100%",
-                    }}
-                  >
-                    <Card className={classes.card} style={{ height: "100%" }}>
-                      <div className={classes.cardDetails}>
-                        <CardContent>
-                          <Typography
-                            /* component="h2" */ variant="h5"
-                            style={{ paddingBottom: "10px" }}
-                          >
-                            {post.frontmatter.title}
-                          </Typography>
-                          {/* <Typography variant="subtitle1" color="textSecondary">
-                            {post.frontmatter.date}
-                          </Typography> */}
-                          <Typography
-                            variant="subtitle1"
-                            paragraph
-                            style={{
-                              fontSize: "16px",
-                              fontFamily: "Lato, Roboto, sans-serif",
-                            }}
-                          >
-                            {post.frontmatter.description}
-                          </Typography>
-                          <Typography variant="subtitle1" color="primary">
-                            Continue reading...
-                          </Typography>
-                        </CardContent>
-                      </div>
-                      <Hidden xsDown>
-                        <CardMedia
-                          className={classes.cardMedia}
-                          image="https://source.unsplash.com/random"
-                          title="Image title"
-                        />
-                      </Hidden>
-                    </Card>
-                  </CardActionArea>
-                </Grid>
-              ))}
+            {posts.map(({ node: post }) => (
+              <Grid item key={post.frontmatter.title} xs={12} md={6}>
+                <CardActionArea
+                  component="a"
+                  href={post.frontmatter.path}
+                  style={{
+                    boxShadow: "0px 0px 30px 0px rgba(0, 0, 0, 0.1)",
+                    height: "100%",
+                  }}
+                >
+                  <Card className={classes.card} style={{ height: "100%" }}>
+                    <CardContent>
+                      <Typography
+                        variant="h5"
+                        style={{
+                          padding: "10px 0px",
+                          fontSize: "1.7rem",
+                        }}
+                      >
+                        {post.frontmatter.title}
+                      </Typography>
+                      <Typography
+                        variant="subtitle1"
+                        paragraph
+                        style={{
+                          fontSize: "16px",
+                          fontFamily: "Lato, Roboto, sans-serif",
+                        }}
+                      >
+                        {post.frontmatter.description}
+                      </Typography>
+                      <Typography
+                        variant="subtitle1"
+                        style={{ color: "#0277bd" }}
+                      >
+                        Read more...
+                      </Typography>
+                    </CardContent>
+                    <Hidden xsDown>
+                      <CardMedia
+                        className={classes.cardMedia}
+                        image="https://source.unsplash.com/random"
+                        title="Image title"
+                      />
+                    </Hidden>
+                  </Card>
+                </CardActionArea>
+              </Grid>
+            ))}
           </Grid>
         </Main>
       </main>
@@ -153,17 +152,14 @@ export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(
       filter: { frontmatter: { showOnFrontPage: { eq: true } } }
-      sort: { order: DESC, fields: [frontmatter___date] }
+      sort: { order: DESC, fields: frontmatter___description }
     ) {
       edges {
         node {
           excerpt(pruneLength: 250)
-          id
           frontmatter {
             title
-            date(formatString: "MMMM DD, YYYY")
             path
-            author
             description
           }
         }

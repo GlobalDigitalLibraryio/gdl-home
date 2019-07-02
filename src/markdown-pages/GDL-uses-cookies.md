@@ -2,7 +2,6 @@
 path: "/the-global-digital-library-uses-cookies"
 date: "2019-05-01"
 title: "The Global Digital Library uses cookies"
-author: cami
 description: ""
 showOnFrontPage: false
 ---

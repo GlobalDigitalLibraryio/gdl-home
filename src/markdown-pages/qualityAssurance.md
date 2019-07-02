@@ -2,7 +2,6 @@
 path: "/qa"
 date: "2019-05-01"
 title: "Quality Assurance Standards"
-author: cami
 description: All resources hosted on the Global Digital Library (GDL) are quality assured by relevant expertise to ensure that they are in accordance with the GDL minimum standards.
 showOnFrontPage: true
 ---
@@ -17,30 +16,7 @@ This content category covers decodable and leveled reading books that are aligne
 
 **General QA Standards for all Classroom Materials**
 
-<table>
-  <tr>
-    <th colspan="2">Item for Verification</th>
-  </tr>
-  <tr>
-    <td>Government Approval</td>
-    <td>The book has been approved by the relevant government for use in the classroom either as core or as supplementary reading material</td>
-  </tr>
-  <tr>
-    <td>Language Quality</td>
-    <td>There are no spelling or grammar errors</td>
-  </tr>
-  <tr>
-    <td>Visual Format Quality</td>
-    <td>Illustrations are clear and provide support to the text</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Appropriate Content</td>
-    <td>The book represents different gender, racial, ethnic, majority and minority groups, including people with disabilities, without bias and avoids stereotypes in the text or illustrations</td>
-  </tr>
-  <tr>
-    <td>The book demonstrates positive behaviors or attitudes that do not go against values for peacebuilding, concern for others, or good citizenship</td>
-  </tr>
-</table>
+<table><tr><th colspan="2">Item for Verification</th></tr><tr><td><strong>Government Approval</strong></td><td>The book has been approved by the relevant government for use in the classroom either as core or as supplementary reading material</td></tr><tr><td><strong>Language Quality</strong></td><td>There are no spelling or grammar errors</td></tr><tr><td><strong>Visual Format Quality</strong></td><td>Illustrations are clear and provide support to the text</td></tr><tr><td rowspan="2"><strong>Appropriate Content</strong></td><td>The book represents different gender, racial, ethnic, majority and minority groups, including people with disabilities, without bias and avoids stereotypes in the text or illustrations</td></tr><tr><td>The book demonstrates positive behaviors or attitudes that do not go against values for peacebuilding, concern for others, or good citizenship</td></tr></table>
 
 Within the Classroom Materials category, there are two sub-categories – Decodable Books and Leveled Books.
 
@@ -50,34 +26,7 @@ When content is submitted to the GDL as decodable books for instructional use, i
 
 **Specific QA Standards for Decodable Classroom Books**
 
-<table>
-  <tr>
-    <th colspan="2" style="padding: 20px; border: 1px solid #e3e3e3;
-  border-collapse: collapse;">Item for Verification</th>
-  </tr>
-  <tr>
-    <td rowspan="5" style="padding: 20px; border: 1px solid #e3e3e3;
-  border-collapse: collapse;">Decodability</td>
-    <td style="padding: 20px; border: 1px solid #e3e3e3;
-  border-collapse: collapse;">The book aligns directly with a curriculum that incorporates a systematic scope and sequence of skill instruction</td>
-  </tr>
-  <tr>
-    <td style="padding: 20px; border: 1px solid #e3e3e3;
-  border-collapse: collapse;">The book uses simple, easy to decode words</td>
-  </tr>
-  <tr>
-    <td style="padding: 20px; border: 1px solid #e3e3e3;
-  border-collapse: collapse;">The book has 75% – 80% of words that are decodable based on previous phonics instruction</td>
-  </tr>
-  <tr>
-    <td style="padding: 20px; border: 1px solid #e3e3e3;
-  border-collapse: collapse;">The book incorporates a few sight words</td>
-  </tr>
-  <tr>
-    <td style="padding: 20px; border: 1px solid #e3e3e3;
-  border-collapse: collapse;">Length of sentence and overall text is appropriate for beginner readers</td>
-  </tr>
-</table>
+<table><tr><th colspan="2">Item for Verification</th></tr><tr><td rowspan="5"><strong>Decodability</strong></td><td>The book aligns directly with a curriculum that incorporates a systematic scope and sequence of skill instruction</td></tr><tr><td>The book uses simple, easy to decode words</td></tr><tr><td>The book has 75% – 80% of words that are decodable based on previous phonics instruction</td></tr><tr><td>The book incorporates a few sight words</td></tr><tr><td>Length of sentence and overall text is appropriate for beginner readers</td></tr></tbody></table>
 
 ###Leveled Books
 
@@ -85,48 +34,7 @@ When content is submitted to the GDL as leveled books for instructional use, it 
 
 **Specific QA Standards for Leveled Classroom Books**
 
-<table>
-  <tr>
-    <th colspan="2" style="padding: 20px; border: 1px solid #e3e3e3;
-  border-collapse: collapse;">Item for Verification</th>
-  </tr>
-  <tr>
-    <td rowspan="5" style="padding: 20px; border: 1px solid #e3e3e3;
-  border-collapse: collapse;">Leveling Quality (in relation to leveling guidelines for the relevant language)</td>
-    <td style="padding: 20px; border: 1px solid #e3e3e3;
-  border-collapse: collapse;">Number of syllable(s) per word is appropriate for the given reading level</td>
-  </tr>
-  <tr>
-    <td style="padding: 20px; border: 1px solid #e3e3e3;
-  border-collapse: collapse;">The words used in the story are easily understood by children at the given reading level</td>
-  </tr>
-  <tr>
-    <td style="padding: 20px; border: 1px solid #e3e3e3;
-  border-collapse: collapse;">Sentence length is appropriate for the given reading level</td>
-  </tr>
-  <tr>
-    <td style="padding: 20px; border: 1px solid #e3e3e3;
-  border-collapse: collapse;">There is appropriate sentence type and structure for the given reading level</td>
-  </tr>
-  <tr>
-    <td style="padding: 20px; border: 1px solid #e3e3e3;
-  border-collapse: collapse;">Text density is appropriate to the given reading level</td>
-  </tr>
-  <tr>
-    <td rowspan="3" style="padding: 20px; border: 1px solid #e3e3e3;
-  border-collapse: collapse;">Appropriate Content</td>
-    <td style="padding: 20px; border: 1px solid #e3e3e3;
-  border-collapse: collapse;">The story is relevant to children and includes activities familiar to them</td>
-  </tr>
-  <tr>
-    <td style="padding: 20px; border: 1px solid #e3e3e3;
-  border-collapse: collapse;">The story plot is engaging to children</td>
-  </tr>
-  <tr>
-    <td style="padding: 20px; border: 1px solid #e3e3e3;
-  border-collapse: collapse;">The story is presented clearly and logically, with sentences and paragraphs that are coherent</td>
-  </tr> 
-</table>
+<table><tr><th colspan="2">Item for Verification</th></tr><tr><td rowspan="5"><strong>Leveling Quality (in relation to leveling guidelines for the relevant language)</strong></td><td>Number of syllable(s) per word is appropriate for the given reading level</td></tr><tr><td>The words used in the story are easily understood by children at the given reading level</td></tr><tr><td>Sentence length is appropriate for the given reading level</td></tr><tr><td>There is appropriate sentence type and structure for the given reading level</td></tr><tr><td>Text density is appropriate to the given reading level</td></tr><tr><td rowspan="3"><strong>Appropriate Content</strong></td><td>The story is relevant to children and includes activities familiar to them</td></tr><tr><td>The story plot is engaging to children</td></tr><tr><td>The story is presented clearly and logically, with sentences and paragraphs that are coherent</td></tr></table>
 
 ## Library Material
 
@@ -148,32 +56,7 @@ Below are QA standards that apply to all books in the Library Materials category
 
 **General QA Standards for all Library Materials**
 
-<table>
-  <tr>
-    <th colspan="2" style="padding: 20px; border: 1px solid #e3e3e3;
-  border-collapse: collapse;">Item for Verification</th>
-  </tr>
-  <tr>
-    <td style="padding: 20px; border: 1px solid #e3e3e3;
-  border-collapse: collapse;">Language Quality</td>
-    <td style="padding: 20px; border: 1px solid #e3e3e3;
-  border-collapse: collapse;">There are no spelling or grammar errors</td>
-  </tr>
-<tr>
-    <td rowspan="3" style="padding: 20px; border: 1px solid #e3e3e3;
-  border-collapse: collapse;">Appropriate Content</td>
-    <td style="padding: 20px; border: 1px solid #e3e3e3;
-  border-collapse: collapse;">The story plot is engaging to children</td>
-  </tr>
-  <tr>
-    <td style="padding: 20px; border: 1px solid #e3e3e3;
-  border-collapse: collapse;">The book represents different gender, racial, ethnic, majority and minority groups, including people with disabilities, without bias and avoids stereotypes in the text or illustrations</td>
-  </tr>
-  <tr>
-    <td style="padding: 20px; border: 1px solid #e3e3e3;
-  border-collapse: collapse;">The book demonstrates positive behaviors or attitudes that do not go against values for peacebuilding, concern for others, or good citizenship</td>
-  </tr> 
-</table>
+<table><tr><th colspan="2">Item for Verification</th></tr><tr><td><strong>Language Quality</strong></td><td>There are no spelling or grammar errors</td></tr><tr><td rowspan="3"><strong>Appropriate Content</strong></td><td>The story plot is engaging to children</td></tr><tr><td>The book represents different gender, racial, ethnic, majority and minority groups, including people with disabilities, without bias and avoids stereotypes in the text or illustrations</td></tr><tr><td>The book demonstrates positive behaviors or attitudes that do not go against values for peacebuilding, concern for others, or good citizenship</td></tr></table>
 
 Within the Library Materials category, there are three sub-categories of books – Decodable Books, Leveled Books and Read-aloud Books.
 
@@ -189,24 +72,7 @@ When content is submitted to the GDL as leveled Library books, it should be asse
 
 **Specific QA Standards for Leveled Library Books**
 
-<table>
-  <tr>
-    <th colspan="2" style="padding: 20px; border: 1px solid #e3e3e3;
-  border-collapse: collapse;">Item for Verification</th>
-  </tr>
-  <tr>
-    <td style="padding: 20px; border: 1px solid #e3e3e3;
-  border-collapse: collapse;">Leveling quality (in relation to the leveling system used by the provider)</td>
-    <td style="padding: 20px; border: 1px solid #e3e3e3;
-  border-collapse: collapse;">The books has been leveled within the range 1-4 in accordance with a GDL-approved leveling approach</td>
-  </tr>
-<tr>
-    <td style="padding: 20px; border: 1px solid #e3e3e3;
-  border-collapse: collapse;">Visual Format Quality</td>
-    <td style="padding: 20px; border: 1px solid #e3e3e3;
-  border-collapse: collapse;">Illustrations/pictures are of high quality and relevant for the text</td>
-  </tr>
-</table>
+<table><tr><th colspan="2">Item for Verification</th></tr><tr><td><strong>Leveling quality (in relation to the leveling system used by the provider)</strong></td><td>The books has been leveled within the range 1-4 in accordance with a GDL-approved leveling approach</td></tr><tr><td><strong>Visual Format Quality</strong></td><td>Illustrations/pictures are of high quality and relevant for the text</td></tr></table>
 
 ###Read-aloud books
 

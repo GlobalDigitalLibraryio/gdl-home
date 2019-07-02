@@ -3,14 +3,6 @@
   width: 100vw;
 }
 
-.pageContent {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
-  padding: 70px 30px;
-}
-
 table {
   border: 1px solid #e3e3e3;
   border-collapse: collapse;
@@ -21,13 +13,14 @@ td {
   padding: 20px;
   border: 1px solid #e3e3e3;
   border-collapse: collapse;
+  text-align: left;
 }
 th:first-child,
 td:first-child {
   padding-left: 20px;
 }
 
-.blogContainer {
+.postContainer {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -38,7 +31,7 @@ td:first-child {
   font-family: Lato, Roboto, sans-serif;
 }
 @media (min-width: 960px) {
-  .blogContainer {
+  .postContainer {
     padding: 50px 120px;
   }
   .pageContent {
@@ -50,4 +43,16 @@ td:first-child {
   font-weight: 600;
   font-size: 2.6rem;
   margin-bottom: 20px;
+}
+#h2 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+#h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 10px 0px;
 }

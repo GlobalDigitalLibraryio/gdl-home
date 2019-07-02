@@ -1,11 +1,3 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
-
-// You can delete this file if you're not using it
-
 const path = require(`path`)
 
 const { fmImagesToRelative } = require("gatsby-remark-relative-images")
@@ -17,7 +9,7 @@ exports.onCreateNode = ({ node }) => {
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
-  const blogPostTemplate = path.resolve(`src/templates/blogTemplate.js`)
+  const postTemplate = path.resolve(`src/templates/postsTemplate.js`)
 
   return graphql(`
     {
@@ -34,7 +26,6 @@ exports.createPages = ({ actions, graphql }) => {
               date
               path
               title
-              author
               description
               showOnFrontPage
             }
@@ -48,10 +39,9 @@ exports.createPages = ({ actions, graphql }) => {
     }
 
     return result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      /*  if (node.frontmatter.showOnFrontPage) { */
       createPage({
         path: node.frontmatter.path,
-        component: blogPostTemplate,
+        component: postTemplate,
         context: {}, // additional data can be passed via context
       })
       /*  } */

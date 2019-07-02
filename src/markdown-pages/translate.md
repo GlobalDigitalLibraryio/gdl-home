@@ -2,7 +2,6 @@
 path: "/translate"
 date: "2019-09-04"
 title: "Translate"
-author: Olivier
 description: ""
 showOnFrontPage: true
 ---
@@ -10,7 +9,7 @@ showOnFrontPage: true
 #Get started with translation
 
 <figure class="video_container">
-  <iframe src="https://www.youtube.com/embed/Y1ejSNJsuig" frameborder="0" allowfullscreen="true" style="height: 20pc; width: 100%"> </iframe>
+  <iframe src="https://www.youtube.com/embed/Y1ejSNJsuig" frameborder="0" allowfullscreen style="height: 20pc; width: 100%"> </iframe>
 </figure>
 
 _Video explaining translation on the GDL in just over 90 seconds._

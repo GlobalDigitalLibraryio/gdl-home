@@ -1,11 +1,12 @@
 import React from "react"
-
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Main from "../elements/Main"
 import Cover from "../elements/Cover"
 import { Grid } from "@material-ui/core"
 import "../style/gridStyle.css"
+import BackButton from "../components/backButton"
 
 function gdlInNews({ data }) {
   const { edges: posts } = data.allMarkdownRemark
@@ -28,8 +29,9 @@ function gdlInNews({ data }) {
             <h2>Global Digital Library in the news</h2>
           </Cover>
           <Grid>
-            <div className="pageContent">
+            <div className="postContainer">
               <div dangerouslySetInnerHTML={{ __html: posts[0].node.html }} />{" "}
+              <BackButton />
             </div>
           </Grid>
         </Main>
@@ -51,7 +53,6 @@ export const pageQuery = graphql`
             title
             date(formatString: "MMMM DD, YYYY")
             path
-            author
             description
           }
           html

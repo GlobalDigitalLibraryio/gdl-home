@@ -2,10 +2,11 @@
 path: "/privacy"
 date: "2019-05-01"
 title: "Privacy"
-author: cami
 description: ""
 showOnFrontPage: false
 ---
+
+**April 2018**
 
 ##About this policy
 

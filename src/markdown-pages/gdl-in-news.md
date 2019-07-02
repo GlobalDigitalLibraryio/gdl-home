@@ -2,12 +2,11 @@
 path: "/gdlNews"
 date: "2019-09-06"
 title: "GDL in news"
-author: "2019"
 description: d
 showOnFrontPage: false
 ---
 
-##2018
+## 2018
 
 - APO Africa Newsroom: https://www.africa-newsroom.com/press/new-global-digital-library-to-provide-free-reading-resources-for-ethiopian-children?lang=en
 - Linked from African Business Magazine: http://africanbusinessmagazine.com/feed-items/new-global-digital-library-to-provide-free-reading-resources-for-ethiopian-children
