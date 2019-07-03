@@ -8,9 +8,9 @@ showOnFrontPage: false
 
 #Get started with translation
 
-<figure class="video_container">
-  <iframe src="https://www.youtube.com/embed/Y1ejSNJsuig" frameborder="0" allowfullscreen style="height: 20pc; width: 100%"> </iframe>
-</figure>
+<video>
+https://www.youtube.com/watch?v=Y1ejSNJsuig
+</video>
 
 _Video explaining translation on the GDL in just over 90 seconds._
 

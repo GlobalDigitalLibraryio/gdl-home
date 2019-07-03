@@ -6,9 +6,9 @@ description: d
 showOnFrontPage: false
 ---
 
-<figure class="video_container">
-  <iframe src="https://www.youtube.com/embed/JOS5CrJOvZw" frameborder="0" allowfullscreen="true" style="height: 20pc; width: 100%"> </iframe>
-</figure>
+<video>
+https://www.youtube.com/watch?v=JOS5CrJOvZw
+</video>
 
 **The GDL core platform will hold digital copies of Creative Commons or otherwise openly licensed, publicly accessible materials. All content will be marked with the correct license, authors, and illustrators.**
 

@@ -9,9 +9,48 @@ import rehypeReact from "rehype-react"
 import { Typography } from "@material-ui/core"
 import BackButton from "../components/backButton"
 
-const renderAst = new rehypeReact({
+function H1(props) {
+  return (
+    <Typography id="h1" variant="h3">
+      {props.children}
+    </Typography>
+  )
+}
+function H2(props) {
+  return (
+    <Typography id="h2" variant="h5">
+      {props.children}
+    </Typography>
+  )
+}
+function H3(props) {
+  return (
+    <Typography id="h3" variant="h5">
+      {props.children}
+    </Typography>
+  )
+}
+
+export const videoTag = link => {
+  console.log(link.children[0])
+  return (
+    <figure className="video_container">
+      <iframe
+        className="video"
+        src={link.children[0].replace("watch?v=", "embed/")}
+        frameBorder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        title="noe her"
+        style={{ width: "100%", height: "20pc" }}
+      />
+    </figure>
+  )
+}
+
+export const renderAst = new rehypeReact({
   createElement: React.createElement,
-  components: { h1: H1, h2: H2, h3: H3 },
+  components: { h1: H1, h2: H2, h3: H3, video: videoTag },
 }).Compiler
 
 export default function Template({ data }) {
@@ -66,25 +105,3 @@ export const pageQuery = graphql`
     }
   }
 `
-
-function H1(props) {
-  return (
-    <Typography id="h1" variant="h3">
-      {props.children}
-    </Typography>
-  )
-}
-function H2(props) {
-  return (
-    <Typography id="h2" variant="h5">
-      {props.children}
-    </Typography>
-  )
-}
-function H3(props) {
-  return (
-    <Typography id="h3" variant="h5">
-      {props.children}
-    </Typography>
-  )
-}

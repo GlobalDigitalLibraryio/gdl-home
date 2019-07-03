@@ -67,11 +67,11 @@ export default function Index({ data }) {
                     className={
                       key % 4 === 0 || key % 4 === 3
                         ? key % 2 === 0
-                          ? ""
-                          : "colorSmallScreen"
+                          ? "card"
+                          : "colorSmallScreen card"
                         : key % 2 === 0
-                        ? "colorBigScreen"
-                        : "colorBigScreen colorSmallScreen"
+                        ? "colorBigScreen card"
+                        : "colorBigScreen colorSmallScreen card"
                     }
                     style={{ height: "100%" }}
                   >
@@ -111,7 +111,7 @@ export default function Index({ data }) {
           <Sponsors />
 
           <div style={{ marginTop: "30px" }}>
-            <Card>
+            <Card className="card">
               <CardContent id="blogInfo">
                 <Typography
                   variant="h5"
@@ -123,7 +123,7 @@ export default function Index({ data }) {
                   News, info and updates on the development of the Global
                   Digital Library
                 </Typography>
-                <div class="quote">
+                <div className="quote">
                   <Typography
                     variant="subtitle1"
                     paragraph

@@ -36,9 +36,9 @@ In this part, you will get a short introduction to the platform, including how t
 
 _Video duration: 5 minutes._
 
-<figure class="video_container">
-  <iframe src="https://www.youtube.com/embed/cu_OFKi8UBA" frameborder="0" allowfullscreen={true} style="height: 20pc; width: 100%"> </iframe>
-</figure>
+<video>
+https://www.youtube.com/watch?v=cu_OFKi8UBA
+</video>
 
 ##Preparations before the translation workshop/book sprint:
 
