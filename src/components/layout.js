@@ -5,7 +5,7 @@ import Header from "./header"
 import Footer from "./Footer/footer"
 
 const Layout = ({ children }) => (
-  <div style={{ height: "auto", overflow: "hidden" }}>
+  <div style={{ height: "auto" }}>
     <Header />
     {children}
     <Footer />

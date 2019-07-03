@@ -17,15 +17,7 @@
   margin-bottom: 50px;
 }
 
-#linkList a {
-  color: rgb(68, 68, 68);
-  text-decoration: none;
-  font-size: 0.8rem;
-}
-#linkList a:hover {
-  text-decoration: underline;
-}
-#linkList {
+#footerList {
   display: flex;
   -webkit-box-pack: justify;
   justify-content: space-between;
@@ -39,15 +31,23 @@
   list-style: none;
 }
 
+#footerList a {
+  color: rgb(68, 68, 68);
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+#footerList a:hover {
+  text-decoration: underline;
+}
+#footerList div {
+  padding: 8px;
+  width: 50%;
+}
+
 #creativeCommons {
   order: 3;
   flex-grow: 1;
   text-align: center;
-}
-
-#linkList div {
-  padding: 8px;
-  width: 50%;
 }
 
 #socialMediaIcons {
@@ -77,7 +77,7 @@
 }
 
 @media (min-width: 768px) {
-  #linkList div {
+  #footerList div {
     max-width: 33%;
   }
   #socialMediaIcons {

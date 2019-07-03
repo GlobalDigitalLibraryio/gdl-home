@@ -3,7 +3,7 @@ path: "/translation-step-by-step"
 date: "2019-09-04"
 title: "Translation step by step"
 description: ""
-showOnFrontPage: true
+showOnFrontPage: false
 ---
 
 # 8 steps to getting started with translation

@@ -6,11 +6,11 @@ description: "By the end of 2018 the Library will offer resources in at least 25
 showOnFrontPage: true
 ---
 
-#Global Digital Library Questions and Answers
+#Questions and Answers
 
 In the sections below you will find a collection of questions and answers grouped under relevant headings. You click on the heading to expand the relevant section with Frequently Asked Questions for that topic.
 
-<details >
+<details>
 <summary>GDL key features</summary>
 
 **Q1: What distinguishes the Global Digital Library from other digital libraries?**

@@ -1,9 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import SEO from "../components/seo"
-
 import Layout from "../components/layout"
-import { makeStyles } from "@material-ui/core/styles"
 
 import {
   Button,
@@ -11,57 +9,20 @@ import {
   CardActionArea,
   Card,
   CardContent,
-  Hidden,
-  CardMedia,
   Typography,
 } from "@material-ui/core"
 
 import Main from "../elements/Main"
 import Cover from "../elements/Cover"
+import Sponsors from "../elements/sponsors"
 import "../Style/indexStyle.css"
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    width: "100%",
-    maxWidth: 360,
-    backgroundColor: theme.palette.background.paper,
-    position: "relative",
-    overflow: "auto",
-    maxHeight: 300,
-  },
-  listSection: {
-    backgroundColor: "inherit",
-  },
-  ul: {
-    backgroundColor: "inherit",
-    padding: 0,
-  },
-  mainFeaturedPostContent: {
-    position: "relative",
-    padding: theme.spacing(3),
-    [theme.breakpoints.up("md")]: {
-      padding: theme.spacing(6),
-      paddingRight: 0,
-    },
-  },
-  overlay: {
-    position: "absolute",
-    top: 0,
-    bottom: 0,
-    right: 0,
-    left: 0,
-    backgroundColor: "rgba(0,0,0,.3)",
-  },
-}))
 
 export default function Index({ data }) {
   const { edges: posts } = data.allMarkdownRemark
-  const classes = useStyles()
 
   return (
     <Layout>
       <SEO title="Home" />
-      {/* <Container maxWidth="lg"> */}
       <main
         style={{
           marginLeft: "auto",
@@ -69,7 +30,6 @@ export default function Index({ data }) {
           display: "flex",
           width: "fit-content",
           flex: "1 0 auto",
-          //boxShadow: "0px 0px 40px 0px rgba(0, 0, 0, 0.2)",
           height: "fit-content",
         }}
       >
@@ -90,10 +50,11 @@ export default function Index({ data }) {
               </Button>
             </p>
           </Cover>
-          <br></br>
-          <Grid container spacing={4}>
-            {posts.map(({ node: post }) => (
-              <Grid item key={post.frontmatter.title} xs={12} md={6}>
+
+          <br />
+          <Grid container spacing={4} id="gridFrontPage">
+            {posts.map(({ node: post }, key) => (
+              <Grid item key={post.frontmatter.title}>
                 <CardActionArea
                   component="a"
                   href={post.frontmatter.path}
@@ -102,7 +63,18 @@ export default function Index({ data }) {
                     height: "100%",
                   }}
                 >
-                  <Card className={classes.card} style={{ height: "100%" }}>
+                  <Card
+                    className={
+                      key % 4 === 0 || key % 4 === 3
+                        ? key % 2 === 0
+                          ? ""
+                          : "colorSmallScreen"
+                        : key % 2 === 0
+                        ? "colorBigScreen"
+                        : "colorBigScreen colorSmallScreen"
+                    }
+                    style={{ height: "100%" }}
+                  >
                     <CardContent>
                       <Typography
                         variant="h5"
@@ -130,18 +102,52 @@ export default function Index({ data }) {
                         Read more...
                       </Typography>
                     </CardContent>
-                    <Hidden xsDown>
-                      <CardMedia
-                        className={classes.cardMedia}
-                        image="https://source.unsplash.com/random"
-                        title="Image title"
-                      />
-                    </Hidden>
                   </Card>
                 </CardActionArea>
               </Grid>
             ))}
           </Grid>
+
+          <Sponsors />
+
+          <div style={{ marginTop: "30px" }}>
+            <Card>
+              <CardContent id="blogInfo">
+                <Typography
+                  variant="h5"
+                  style={{
+                    padding: "10px 0px",
+                    fontSize: "1.7rem",
+                  }}
+                >
+                  News, info and updates on the development of the Global
+                  Digital Library
+                </Typography>
+                <div class="quote">
+                  <Typography
+                    variant="subtitle1"
+                    paragraph
+                    style={{
+                      fontSize: "16px",
+                      fontFamily: "Lato, Roboto, sans-serif",
+                    }}
+                  >
+                    In the blog you can read about experiences developing the
+                    GDL to date and be kept in the loop as it evolves.
+                  </Typography>
+                </div>
+                <p style={{ marginLeft: "auto", marginRight: "auto" }}>
+                  <Button
+                    id="blogBtnLink"
+                    variant="outlined"
+                    href="https://blog.digitallibrary.io/"
+                  >
+                    Visit the blog
+                  </Button>
+                </p>
+              </CardContent>
+            </Card>
+          </div>
         </Main>
       </main>
     </Layout>

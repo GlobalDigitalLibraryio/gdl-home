@@ -44,7 +44,6 @@ exports.createPages = ({ actions, graphql }) => {
         component: postTemplate,
         context: {}, // additional data can be passed via context
       })
-      /*  } */
     })
   })
 }

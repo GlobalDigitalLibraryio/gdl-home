@@ -9,28 +9,6 @@ import rehypeReact from "rehype-react"
 import { Typography } from "@material-ui/core"
 import BackButton from "../components/backButton"
 
-function H1(props) {
-  return (
-    <Typography id="h1" variant="h3">
-      {props.children}
-    </Typography>
-  )
-}
-function H2(props) {
-  return (
-    <Typography id="h2" variant="h5">
-      {props.children}
-    </Typography>
-  )
-}
-function H3(props) {
-  return (
-    <Typography id="h3" variant="h5">
-      {props.children}
-    </Typography>
-  )
-}
-
 const renderAst = new rehypeReact({
   createElement: React.createElement,
   components: { h1: H1, h2: H2, h3: H3 },
@@ -88,3 +66,25 @@ export const pageQuery = graphql`
     }
   }
 `
+
+function H1(props) {
+  return (
+    <Typography id="h1" variant="h3">
+      {props.children}
+    </Typography>
+  )
+}
+function H2(props) {
+  return (
+    <Typography id="h2" variant="h5">
+      {props.children}
+    </Typography>
+  )
+}
+function H3(props) {
+  return (
+    <Typography id="h3" variant="h5">
+      {props.children}
+    </Typography>
+  )
+}

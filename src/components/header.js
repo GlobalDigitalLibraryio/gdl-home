@@ -60,7 +60,7 @@ export default function Header() {
             <ListItemText primary="Home" />
           </ListItem>
         </a>
-        <a className="smlHeaderLink" href="/">
+        <a className="smlHeaderLink" href="https://blog.digitallibrary.io/">
           <ListItem button key="blogBtn">
             <ListItemText primary="Blog" />
           </ListItem>
@@ -114,7 +114,7 @@ export default function Header() {
           >
             <Button color="inherit">Home</Button>
           </a>
-          <a className="headerLink" href="/">
+          <a className="headerLink" href="https://blog.digitallibrary.io/">
             <Button color="inherit">Blog</Button>
           </a>
           <a

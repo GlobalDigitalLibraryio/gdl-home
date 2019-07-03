@@ -3,7 +3,7 @@ path: "/translate"
 date: "2019-09-04"
 title: "Translate"
 description: ""
-showOnFrontPage: true
+showOnFrontPage: false
 ---
 
 #Get started with translation

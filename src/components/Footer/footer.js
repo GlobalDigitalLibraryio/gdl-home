@@ -21,7 +21,7 @@ const Footer = () => (
       <div id="footerContainer">
         <footer id="footerId">
           <div id="footerDivider" />
-          <ul id="linkList">
+          <ul id="footerList">
             <div>
               <a href="https://home.digitallibrary.io/the-global-digital-library-uses-cookies/">
                 Cookie policy

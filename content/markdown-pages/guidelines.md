@@ -6,11 +6,10 @@ description: The GDL project has defined a common set of metadata and guidelines
 showOnFrontPage: true
 ---
 
-#GDL content import guidelines
-<br/>
+#Content import guidelines
 
 <figure class="video_container">
-  <iframe src="https://www.youtube.com/embed/fcTLR7chm38" frameborder="0" allowfullscreen="true" style="height: 20pc; width: 100%"> </iframe>
+  <iframe src="https://www.youtube.com/embed/fcTLR7chm38" frameborder="0" allowfullscreen={true} style="height: 20pc; width: 100%"> </iframe>
 </figure>
 
 The GDL will collect existing high quality open educational reading resources, and make them available on the web, mobile and for print. The platform will also facilitate translation and localization of these resources to more than 300 languages.

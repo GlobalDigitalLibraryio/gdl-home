@@ -30,6 +30,19 @@ td:first-child {
   font-size: 1rem;
   font-family: Lato, Roboto, sans-serif;
 }
+
+#sponsorGrid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-auto-rows: 1fr;
+}
+
+@media (min-width: 655px) {
+  #sponsorGrid {
+    grid-template-columns: auto auto auto auto auto auto;
+  }
+}
+
 @media (min-width: 960px) {
   .postContainer {
     padding: 50px 120px;

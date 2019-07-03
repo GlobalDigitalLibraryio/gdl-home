@@ -3,7 +3,7 @@ path: "/translation-startup-kit"
 date: "2019-09-04"
 title: "Translation Startup Kit"
 description: ""
-showOnFrontPage: true
+showOnFrontPage: false
 ---
 
 #GDL Translation startup kit
