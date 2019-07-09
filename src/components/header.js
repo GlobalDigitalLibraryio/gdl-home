@@ -1,4 +1,3 @@
-import { Link } from "gatsby"
 import React from "react"
 import { makeStyles } from "@material-ui/core/styles"
 
@@ -94,17 +93,10 @@ export default function Header() {
       <AppBar
         id="appBarBig"
         style={{ background: "#0277bd" }}
-        position="static"
+        position="sticky"
       >
         <Toolbar>
-          <Link to="/" aria-label="Global Digital Library">
-            <img
-              src={gdlLogo}
-              className={classes.logo}
-              aria-hidden
-              alt="logo"
-            />
-          </Link>
+          <img src={gdlLogo} className={classes.logo} aria-hidden alt="logo" />
           <Typography variant="h6" style={{ flexGrow: 1 }}></Typography>
           <a
             className={
@@ -148,20 +140,18 @@ export default function Header() {
         <AppBar
           id="appBarSmall"
           style={{ background: "#0277bd" }}
-          position="static"
+          position="sticky"
         >
           <Toolbar>
             <IconButton color="inherit" onClick={toggleDrawer("left", true)}>
               <MenuIcon style={{ color: "white" }} />
             </IconButton>
-            <Link to="/" aria-label="Global Digital Library">
-              <img
-                src={gdlLogo}
-                className={classes.logo}
-                aria-hidden
-                alt="logo"
-              />
-            </Link>
+            <img
+              src={gdlLogo}
+              className={classes.logo}
+              aria-hidden
+              alt="logo"
+            />
           </Toolbar>
         </AppBar>
         <SwipeableDrawer
