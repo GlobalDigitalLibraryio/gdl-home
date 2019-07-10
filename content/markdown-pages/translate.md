@@ -1,6 +1,6 @@
 ---
 path: "/translate"
-date: "2019-09-04"
+date: ""
 title: "Translate"
 description: ""
 showOnFrontPage: false

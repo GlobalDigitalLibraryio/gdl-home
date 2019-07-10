@@ -82,7 +82,11 @@ export default function Template({ data }) {
       >
         <Main>
           <div className="postContainer">
-            {" "}
+            <div style={{ paddingBottom: "20px", fontStyle: "italic" }}>
+              {post.frontmatter.date !== "Invalid date"
+                ? post.frontmatter.date
+                : ""}
+            </div>
             {renderAst(post.htmlAst)}
             <BackButton />
           </div>

@@ -1,6 +1,6 @@
 ---
 path: "/faq"
-date: "2019-09-07"
+date: ""
 title: "FAQ"
 description: "By the end of 2018 the Library will offer resources in at least 25 languages, and by end 2020 at least 100 languages."
 showOnFrontPage: true

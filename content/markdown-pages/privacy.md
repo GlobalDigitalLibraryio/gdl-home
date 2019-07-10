@@ -1,14 +1,12 @@
 ---
 path: "/privacy"
-date: "2019-05-01"
+date: "2018-04-02"
 title: "Privacy"
 description: ""
 showOnFrontPage: false
 ---
 
-**April 2018**
-
-##About this policy
+#About this policy
 
 GDL are committed to protect the privacy of all individuals who are using GDL services, including third-party services. In this policy, personal information means information relating to anyone who – by using our services and applications – can be identified, directly or indirectly, in particular by reference to an identifier such as a name, an identification number or email address, location data, and online identifier or to one or more factors specific to his/her physical, physiological, genetic, mental, economic, cultural or social identity.
 

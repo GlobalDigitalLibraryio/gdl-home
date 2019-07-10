@@ -1,6 +1,6 @@
 ---
 path: "/translation-startup-kit"
-date: "2019-09-04"
+date: ""
 title: "Translation Startup Kit"
 description: ""
 showOnFrontPage: false

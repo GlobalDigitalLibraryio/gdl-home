@@ -1,8 +1,8 @@
 ---
 path: "/gdlNews"
-date: "2019-09-06"
+date: ""
 title: "GDL in news"
-description: d
+description: ""
 showOnFrontPage: false
 ---
 

@@ -1,6 +1,6 @@
 ---
 path: "/translation-step-by-step"
-date: "2019-09-04"
+date: ""
 title: "Translation step by step"
 description: ""
 showOnFrontPage: false

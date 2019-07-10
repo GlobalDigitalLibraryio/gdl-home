@@ -28,7 +28,7 @@ export default function Index({ data }) {
           marginLeft: "auto",
           marginRight: "auto",
           display: "flex",
-          width: "fit-content",
+          /* width: "fit-content", */
           flex: "1 0 auto",
           height: "fit-content",
         }}
@@ -50,9 +50,7 @@ export default function Index({ data }) {
               </Button>
             </p>
           </Cover>
-
-          <br />
-          <Grid container spacing={4} id="gridFrontPage">
+          <Grid container id="gridFrontPage">
             {posts.map(({ node: post }, key) => (
               <Grid item key={post.frontmatter.title}>
                 <CardActionArea

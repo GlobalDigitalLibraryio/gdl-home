@@ -1,6 +1,6 @@
 ---
 path: "/cc"
-date: "2018-05-09"
+date: ""
 title: "Creative Commons"
 description: d
 showOnFrontPage: false

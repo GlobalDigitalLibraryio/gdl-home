@@ -1,6 +1,6 @@
 ---
 path: "/booksprint"
-date: "2019-09-04"
+date: ""
 title: "GDL translation book sprint"
 description: ""
 showOnFrontPage: false

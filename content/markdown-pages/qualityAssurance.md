@@ -1,6 +1,6 @@
 ---
 path: "/qa"
-date: "2019-05-01"
+date: ""
 title: "Quality Assurance Standards"
 description: All resources hosted on the Global Digital Library (GDL) are quality assured by relevant expertise to ensure that they are in accordance with the GDL minimum standards.
 showOnFrontPage: true

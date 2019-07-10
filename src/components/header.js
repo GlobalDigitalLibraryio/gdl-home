@@ -92,7 +92,7 @@ export default function Header() {
     <>
       <AppBar
         id="appBarBig"
-        style={{ background: "#0277bd" }}
+        style={{ background: "#3c5a99" }}
         position="sticky"
       >
         <Toolbar>
@@ -139,7 +139,7 @@ export default function Header() {
       <>
         <AppBar
           id="appBarSmall"
-          style={{ background: "#0277bd" }}
+          style={{ background: "#3c5a99" }}
           position="sticky"
         >
           <Toolbar>

@@ -1,6 +1,6 @@
 ---
 path: "/formats"
-date: "2019-09-06"
+date: ""
 title: "Technical guidelines"
 description: The GDL project has defined a common set of metadata and guidelines for file formats and accessibility.
 showOnFrontPage: true

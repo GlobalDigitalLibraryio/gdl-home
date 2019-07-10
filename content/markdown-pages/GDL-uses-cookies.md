@@ -1,6 +1,6 @@
 ---
 path: "/the-global-digital-library-uses-cookies"
-date: "2019-05-01"
+date: "2019-07-10"
 title: "The Global Digital Library uses cookies"
 description: ""
 showOnFrontPage: false

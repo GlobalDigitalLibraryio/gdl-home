@@ -28,7 +28,8 @@ body {
   display: grid;
   grid-template-columns: auto;
   grid-auto-rows: 1fr;
-  margin-top: 10px;
+  margin-top: 30px;
+  grid-gap: 25px;
 }
 
 ul li {
@@ -36,7 +37,7 @@ ul li {
 }
 
 a {
-  color: #0277bd;
+  color: #3c5a99;
   text-decoration: none;
 }
 
@@ -51,26 +52,27 @@ a {
   margin-top: 20px;
   border-width: 1.7px;
   border-style: solid;
-  border-color: white;
+  border-color: #354f87;
   border-radius: 18px;
+  background-color: rgba(60, 90, 153, 0.7);
 }
 
 #coverBtnLink:hover {
-  border-color: #047bfb;
+  border-color: white;
 }
 
 #blogBtnLink {
-  color: #047bfb;
+  color: #3c5a99;
   margin-right: 10px;
   margin-top: 20px;
   border-width: 1.7px;
   border-style: solid;
-  border-color: #0277bd;
+  border-color: #3c5a99;
   border-radius: 18px;
 }
 
 #blogBtnLink:hover {
-  border-color: #047bfb;
+  border-color: #3c5a99;
   background-color: rgba(2, 119, 189, 0.07);
 }
 
@@ -84,7 +86,7 @@ a {
   }
 
   .colorBigScreen {
-    background-color: rgba(2, 119, 189, 0.05) !important;
+    background-color: rgba(60, 90, 153, 0.07) !important;
   }
   .card {
     padding: 15px;
@@ -93,7 +95,7 @@ a {
 
 @media (max-width: 960px) {
   .colorSmallScreen {
-    background-color: rgba(2, 119, 189, 0.05) !important;
+    background-color: rgba(60, 90, 153, 0.07) !important;
   }
 }
 
