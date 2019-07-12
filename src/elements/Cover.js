@@ -1,5 +1,14 @@
+//@flow
 import React from "react"
 import "../style/coverStyle.css"
 
-const Cover = ({ children }) => <div id="cover">{children}</div>
+type Props = {
+  children: React.node,
+}
+
+class Cover extends React.Component<Props> {
+  render() {
+    return <div id="cover">{this.props.children}</div>
+  }
+}
 export default Cover

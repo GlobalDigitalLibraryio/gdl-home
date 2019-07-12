@@ -1,3 +1,4 @@
+//@flow
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
@@ -8,10 +9,14 @@ import { Grid } from "@material-ui/core"
 import "../style/gridStyle.css"
 import BackButton from "../components/backButton"
 
-function gdlInNews({ data }) {
-  const { edges: posts } = data.allMarkdownRemark
+type Props = {
+  pageQuery: allMarkdownRemark,
+}
+
+function gdlInNews(props: Props) {
+  const { edges: posts } = props.data.allMarkdownRemark
   return (
-    <Layout>
+    <Layout path="/gdl-in-the-news">
       <SEO title="GDL in the news" />
       <main
         style={{

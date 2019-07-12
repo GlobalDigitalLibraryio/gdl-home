@@ -1,62 +1,45 @@
+// @flow
 import React from "react"
-import PropTypes from "prop-types"
 import Helmet from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
 import favicon from "../images/favicon.png"
 
-function SEO({ lang, meta, title }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
+type Props = {
+  title: string,
+}
+
+class SEO extends React.Component<Props> {
+  render() {
+    return (
+      <StaticQuery
+        query={graphql`
+          query {
+            site {
+              siteMetadata {
+                title
+              }
+            }
           }
-        }
-      }
-    `
-  )
-
-  return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta={[
-        {
-          property: `title`,
-          content: title,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-      ].concat(meta)}
-      link={[
-        {
-          rel: "icon",
-          type: "image/png",
-          sizes: "16x16",
-          href: `${favicon}`,
-        },
-        { rel: "shortcut icon", type: "image/png", href: `${favicon}` },
-      ]}
-    />
-  )
-}
-
-SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: ``,
-}
-
-SEO.propTypes = {
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
+        `}
+        render={data => (
+          <Helmet
+            htmlAttributes={{ lang: `en` }}
+            title={this.props.title}
+            titleTemplate={`%s | ${data.site.siteMetadata.title}`}
+            link={[
+              {
+                rel: "icon",
+                type: "image/png",
+                sizes: "16x16",
+                href: `${favicon}`,
+              },
+              { rel: "shortcut icon", type: "image/png", href: `${favicon}` },
+            ]}
+          />
+        )}
+      />
+    )
+  }
 }
 
 export default SEO

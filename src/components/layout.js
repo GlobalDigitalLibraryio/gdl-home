@@ -1,19 +1,23 @@
+//@flow
 import React from "react"
-import PropTypes from "prop-types"
-
 import Header from "./header"
 import Footer from "./Footer/footer"
 
-const Layout = ({ children }) => (
-  <div style={{ height: "auto" }}>
-    <Header />
-    {children}
-    <Footer />
-  </div>
-)
+type Props = {
+  children: React.node,
+  path: string,
+}
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+class Layout extends React.Component<Props> {
+  render() {
+    return (
+      <div style={{ height: "auto" }}>
+        <Header path={this.props.path} />
+        {this.props.children}
+        <Footer />
+      </div>
+    )
+  }
 }
 
 export default Layout

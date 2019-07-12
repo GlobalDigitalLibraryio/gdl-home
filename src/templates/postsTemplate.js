@@ -30,9 +30,7 @@ function H3(props) {
     </Typography>
   )
 }
-
 export const videoTag = link => {
-  console.log(link.children[0])
   return (
     <figure className="video_container">
       <iframe
@@ -53,47 +51,53 @@ export const renderAst = new rehypeReact({
   components: { h1: H1, h2: H2, h3: H3, video: videoTag },
 }).Compiler
 
-export default function Template({ data }) {
-  const post = data.markdownRemark
-  return (
-    <Layout>
-      <Helmet
-        link={[
-          {
-            rel: "icon",
-            type: "image/png",
-            sizes: "16x16",
-            href: `${favicon}`,
-          },
-          { rel: "shortcut icon", type: "image/png", href: `${favicon}` },
-        ]}
-        title={`${post.frontmatter.title} | Global Digital Library`}
-      />
-      <main
-        style={{
-          marginLeft: "auto",
-          marginRight: "auto",
-          display: "flex",
-          width: "fit-content",
-          flex: "1 0 auto",
-          boxShadow: "0px 0px 40px 0px rgba(0, 0, 0, 0.2)",
-          height: "fit-content",
-        }}
-      >
-        <Main>
-          <div className="postContainer">
-            <div style={{ paddingBottom: "20px", fontStyle: "italic" }}>
-              {post.frontmatter.date !== "Invalid date"
-                ? post.frontmatter.date
-                : ""}
+type Props = {
+  pageQuery: markdownRemark,
+}
+
+export default class Template extends React.Component<Props> {
+  render() {
+    const post = this.props.data.markdownRemark
+    return (
+      <Layout path={post.frontmatter.path}>
+        <Helmet
+          link={[
+            {
+              rel: "icon",
+              type: "image/png",
+              sizes: "16x16",
+              href: `${favicon}`,
+            },
+            { rel: "shortcut icon", type: "image/png", href: `${favicon}` },
+          ]}
+          title={`${post.frontmatter.title} | Global Digital Library`}
+        />
+        <main
+          style={{
+            marginLeft: "auto",
+            marginRight: "auto",
+            display: "flex",
+            width: "fit-content",
+            flex: "1 0 auto",
+            boxShadow: "0px 0px 40px 0px rgba(0, 0, 0, 0.2)",
+            height: "fit-content",
+          }}
+        >
+          <Main>
+            <div className="postContainer">
+              <div style={{ paddingBottom: "20px", fontStyle: "italic" }}>
+                {post.frontmatter.date !== "Invalid date"
+                  ? post.frontmatter.date
+                  : ""}
+              </div>
+              {renderAst(post.htmlAst)}
+              <BackButton />
             </div>
-            {renderAst(post.htmlAst)}
-            <BackButton />
-          </div>
-        </Main>
-      </main>
-    </Layout>
-  )
+          </Main>
+        </main>
+      </Layout>
+    )
+  }
 }
 
 export const pageQuery = graphql`
