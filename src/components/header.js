@@ -15,6 +15,7 @@ import {
 import MenuIcon from "@material-ui/icons/Menu"
 import gdlLogo from "../images/GDL-logo.svg"
 import "../style/headerStyle.css"
+import { Location } from "@reach/router"
 
 type State = {
   left: boolean,
@@ -29,6 +30,7 @@ class Header extends React.Component<Props, State> {
   }
   render() {
     const { path } = this.props
+    let blogPath = "https://blog.digitallibrary.io/"
     const toggleDrawer = open => event => {
       if (
         event &&
@@ -53,7 +55,7 @@ class Header extends React.Component<Props, State> {
               <ListItemText primary="Home" />
             </ListItem>
           </a>
-          <a className="smlHeaderLink" href="https://blog.digitallibrary.io/">
+          <a className="smlHeaderLink" href={this.blogPath}>
             <ListItem button key="blogBtn">
               <ListItemText primary="Blog" />
             </ListItem>
@@ -84,6 +86,12 @@ class Header extends React.Component<Props, State> {
 
     return (
       <>
+        <Location>
+          {({ location }) => {
+            this.blogPath = location.origin.replace("home", "blog")
+            console.log(blogPath)
+          }}
+        </Location>
         <AppBar
           id="appBarBig"
           style={{ background: "#3c5a99" }}
@@ -110,7 +118,7 @@ class Header extends React.Component<Props, State> {
             >
               <Button color="inherit">Home</Button>
             </a>
-            <a className="headerLink" href="https://blog.digitallibrary.io/">
+            <a className="headerLink" href={this.blogPath}>
               <Button color="inherit">Blog</Button>
             </a>
             <a
