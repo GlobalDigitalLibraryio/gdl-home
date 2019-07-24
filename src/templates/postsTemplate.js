@@ -37,7 +37,7 @@ export const videoTag = link => {
       style={{
         position: "relative",
         width: "100%",
-        paddingTop: "56.25%",
+        padding: "30%",
         marginLeft: "0",
         marginRight: "0",
       }}
