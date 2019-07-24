@@ -32,7 +32,16 @@ function H3(props) {
 }
 export const videoTag = link => {
   return (
-    <figure className="video_container">
+    <figure
+      className="video_container"
+      style={{
+        position: "relative",
+        width: "100%",
+        padding: "30%",
+        marginLeft: "0",
+        marginRight: "0",
+      }}
+    >
       <iframe
         className="video"
         src={link.children[0].replace("watch?v=", "embed/")}
@@ -40,7 +49,15 @@ export const videoTag = link => {
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
         title="noe her"
-        style={{ width: "100%", height: "20pc" }}
+        style={{
+          position: "absolute",
+          top: "0",
+          left: "0",
+          bottom: "0",
+          right: "0",
+          width: "100%",
+          height: "100%",
+        }}
       />
     </figure>
   )
