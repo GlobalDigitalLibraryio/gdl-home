@@ -15,7 +15,6 @@ import {
 import MenuIcon from "@material-ui/icons/Menu"
 import gdlLogo from "../images/GDL-logo.svg"
 import "../style/headerStyle.css"
-import { Location } from "@reach/router"
 
 type State = {
   left: boolean,
@@ -30,7 +29,21 @@ class Header extends React.Component<Props, State> {
   }
   render() {
     const { path } = this.props
-    let blogPath = "https://blog.digitallibrary.io/"
+    let blogPath
+    switch (process.env.GATSBY_GDL_ENVIRONMENT) {
+      case `test`:
+        blogPath = `https://test.blog.digitallibrary.io/`
+        break
+      case `development`:
+        blogPath = `http://localhost:8000/`
+        break
+      case `staging`:
+        blogPath = `https://staging.blog.digitallibrary.io/`
+        break
+      default:
+        blogPath = `https://blog.digitallibrary.io/`
+        break
+    }
     const toggleDrawer = open => event => {
       if (
         event &&
@@ -55,7 +68,7 @@ class Header extends React.Component<Props, State> {
               <ListItemText primary="Home" />
             </ListItem>
           </a>
-          <a className="smlHeaderLink" href={this.blogPath}>
+          <a className="smlHeaderLink" href={blogPath}>
             <ListItem button key="blogBtn">
               <ListItemText primary="Blog" />
             </ListItem>
@@ -86,12 +99,6 @@ class Header extends React.Component<Props, State> {
 
     return (
       <>
-        <Location>
-          {({ location }) => {
-            this.blogPath = location.origin.replace("home", "blog")
-            console.log(blogPath)
-          }}
-        </Location>
         <AppBar
           id="appBarBig"
           style={{ background: "#3c5a99" }}
@@ -118,7 +125,7 @@ class Header extends React.Component<Props, State> {
             >
               <Button color="inherit">Home</Button>
             </a>
-            <a className="headerLink" href={this.blogPath}>
+            <a className="headerLink" href={blogPath}>
               <Button color="inherit">Blog</Button>
             </a>
             <a
