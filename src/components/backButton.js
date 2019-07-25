@@ -8,7 +8,7 @@ class BackButton extends React.Component {
     return (
       <ButtonBase
         focusRipple
-        style={{ marginTop: 20, width: "fit-content" }}
+        style={{ marginTop: 20, display: "inline-flex" }}
         onClick={() => window.history.back()}
       >
         <ArrowBack style={{ fontSize: 30, color: "#3c5a99" }} />

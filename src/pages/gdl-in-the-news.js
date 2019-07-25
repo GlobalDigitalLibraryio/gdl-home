@@ -3,7 +3,6 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Main from "../elements/Main"
 import Cover from "../elements/Cover"
 import { Grid } from "@material-ui/core"
 import "../style/gridStyle.css"
@@ -22,24 +21,21 @@ function gdlInNews(props: Props) {
         style={{
           marginLeft: "auto",
           marginRight: "auto",
-          display: "flex",
-          width: "fit-content",
           flex: "1 0 auto",
-          boxShadow: "0px 0px 40px 0px rgba(0, 0, 0, 0.2)",
           height: "fit-content",
         }}
       >
-        <Main style={{ boxShadow: "0px 0px 40px 0px rgba(0, 0, 0, 0.2)" }}>
+        <div className="news-grid">
           <Cover>
             <h2>Global Digital Library in the news</h2>
           </Cover>
           <Grid>
-            <div className="postContainer">
+            <div className="postContainer" style={{ wordBreak: "break-word" }}>
               <div dangerouslySetInnerHTML={{ __html: posts[0].node.html }} />{" "}
               <BackButton />
             </div>
           </Grid>
-        </Main>
+        </div>
       </main>
     </Layout>
   )

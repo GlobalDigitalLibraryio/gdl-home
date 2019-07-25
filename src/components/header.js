@@ -23,6 +23,14 @@ type Props = {
   path: string,
 }
 
+const menuItemStyle = {
+  color: "white",
+}
+const menuItemActive = {
+  color: "white",
+  textDecoration: "underline",
+}
+
 class Header extends React.Component<Props, State> {
   state = {
     left: false,
@@ -30,18 +38,16 @@ class Header extends React.Component<Props, State> {
   render() {
     const { path } = this.props
     let blogPath
-    switch (process.env.GATSBY_GDL_ENVIRONMENT) {
-      case `test`:
-        blogPath = `https://test.blog.digitallibrary.io/`
+    const env = process.env.GATSBY_GDL_ENVIRONMENT || "development"
+    switch (env) {
+      case "development":
+        blogPath = "http://localhost:8000/"
         break
-      case `development`:
-        blogPath = `http://localhost:8000/`
-        break
-      case `staging`:
-        blogPath = `https://staging.blog.digitallibrary.io/`
+      case "prod":
+        blogPath = "https://blog.digitallibrary.io/"
         break
       default:
-        blogPath = `https://blog.digitallibrary.io/`
+        blogPath = `https://${env}.blog.digitallibrary.io/`
         break
     }
     const toggleDrawer = open => event => {
@@ -118,35 +124,45 @@ class Header extends React.Component<Props, State> {
               alt="logo"
             />
             <Typography variant="h6" style={{ flexGrow: 1 }}></Typography>
-            <a
+            {/* <a
               id="homeHref"
               className={path === "/" ? "active" : "headerLink"}
               href="/"
+            > */}
+            <Button
+              color="inherit"
+              style={path === "/" ? menuItemActive : menuItemStyle}
+              href="/"
             >
-              <Button color="inherit">Home</Button>
-            </a>
-            <a className="headerLink" href={blogPath}>
-              <Button color="inherit">Blog</Button>
-            </a>
-            <a
-              className={path === "/about" ? "active" : "headerLink"}
+              Home
+            </Button>
+            <Button color="inherit" style={menuItemStyle} href={blogPath}>
+              Blog
+            </Button>
+            <Button
+              color="inherit"
+              style={path === "/about" ? menuItemActive : menuItemStyle}
               href="/about"
             >
-              <Button color="inherit">About</Button>
-            </a>
-            <a
-              className="headerLink"
+              About
+            </Button>
+            <Button
+              color="inherit"
+              style={menuItemStyle}
               href="https://digitallibrary.zendesk.com/hc/en-us/requests/new"
             >
-              <Button color="inherit">Contact</Button>
-            </a>
-            <a
-              id="gdlNewsHref"
-              className={path === "/gdl-in-the-news" ? "active" : "headerLink"}
+              Contact
+            </Button>
+
+            <Button
+              color="inherit"
+              style={
+                path === "/gdl-in-the-news" ? menuItemActive : menuItemStyle
+              }
               href="/gdl-in-the-news"
             >
-              <Button color="inherit">GDL in the news</Button>
-            </a>
+              GDL in the news
+            </Button>
           </Toolbar>
         </AppBar>
 
