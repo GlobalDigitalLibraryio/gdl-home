@@ -124,11 +124,6 @@ class Header extends React.Component<Props, State> {
               alt="logo"
             />
             <Typography variant="h6" style={{ flexGrow: 1 }}></Typography>
-            {/* <a
-              id="homeHref"
-              className={path === "/" ? "active" : "headerLink"}
-              href="/"
-            > */}
             <Button
               color="inherit"
               style={path === "/" ? menuItemActive : menuItemStyle}
