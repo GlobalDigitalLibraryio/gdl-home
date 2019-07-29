@@ -1,9 +1,9 @@
 //@flow
-import React from "react"
+import * as React from "react"
 import "../style/coverStyle.css"
 
 type Props = {
-  children: React.node,
+  children: React.Node,
 }
 
 class Cover extends React.Component<Props> {

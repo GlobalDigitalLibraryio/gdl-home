@@ -1,9 +1,9 @@
 //@flow
-import React from "react"
+import * as React from "react"
 import "../style/gridStyle.css"
 
 type Props = {
-  children: React.node,
+  children: React.Node,
 }
 
 class Main extends React.Component<Props> {

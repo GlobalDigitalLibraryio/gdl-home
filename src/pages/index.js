@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
@@ -32,7 +32,7 @@ export default class Index extends React.Component {
         gdlFrontendPath = "https://digitallibrary.io/"
         break
       default:
-        blogPath = `https://${env}.blog.digitallibrary.io/`
+        blogPath = `https://blog.${env}.digitallibrary.io/`
         gdlFrontendPath = `https://${env}.digitallibrary.io/`
         break
     }

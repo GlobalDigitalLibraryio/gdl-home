@@ -1,5 +1,5 @@
 //@flow
-import React from "react"
+import * as React from "react"
 import {
   AppBar,
   Toolbar,
@@ -47,7 +47,7 @@ class Header extends React.Component<Props, State> {
         blogPath = "https://blog.digitallibrary.io/"
         break
       default:
-        blogPath = `https://${env}.blog.digitallibrary.io/`
+        blogPath = `https://blog.${env}.digitallibrary.io/`
         break
     }
     const toggleDrawer = open => event => {
