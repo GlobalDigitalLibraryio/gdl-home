@@ -8,6 +8,7 @@ import "../style/gridStyle.css"
 import rehypeReact from "rehype-react"
 import { Typography } from "@material-ui/core"
 import BackButton from "../components/backButton"
+import { Location } from "@reach/router"
 
 function H1(props) {
   return (
@@ -75,20 +76,54 @@ type Props = {
 export default class Template extends React.Component<Props> {
   render() {
     const post = this.props.data.markdownRemark
+    let thisUrl
     return (
       <Layout path={post.frontmatter.path}>
-        <Helmet
-          link={[
-            {
-              rel: "icon",
-              type: "image/png",
-              sizes: "16x16",
-              href: `${favicon}`,
-            },
-            { rel: "shortcut icon", type: "image/png", href: `${favicon}` },
-          ]}
-          title={`${post.frontmatter.title} | Global Digital Library`}
-        />
+        <Location>
+          {({ location }) => {
+            thisUrl = location.href
+            return (
+              <Helmet
+                link={[
+                  {
+                    rel: "icon",
+                    type: "image/png",
+                    sizes: "16x16",
+                    href: `${favicon}`,
+                  },
+                  {
+                    rel: "shortcut icon",
+                    type: "image/png",
+                    href: `${favicon}`,
+                  },
+                ]}
+                title={`${post.frontmatter.title} | Global Digital Library`}
+              >
+                <meta property="og:url" content={thisUrl} />
+                <meta property="og:type" content="website" />
+                <meta
+                  property="og:description"
+                  content="The Global Digital Library is part of the Global Book Alliance – bringing books to every child in the world by 2030"
+                />
+                <meta
+                  name="description"
+                  content="The Global Digital Library is part of the Global Book Alliance – bringing books to every child in the world by 2030"
+                />
+                <meta
+                  property="og:site_name"
+                  content="Home | Global Digital Library"
+                />
+                <meta property="og:image" content="../images/cover.png" />
+                <meta name="twitter:card" content="summary" />
+                <meta
+                  name="twitter:image:alt"
+                  content="Global Digital Library Logo"
+                />
+                <meta name="twitter:site" content="@GDigitalLibrary" />
+              </Helmet>
+            )
+          }}
+        </Location>
         <main
           style={{
             marginLeft: "auto",
