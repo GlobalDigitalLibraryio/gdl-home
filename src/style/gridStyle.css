@@ -53,6 +53,20 @@ td:first-child {
   }
 }
 
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.2);
+  height: fit-content;
+}
+
+@media (min-width: 600px) {
+  .container {
+    width: fit-content;
+  }
+}
+
 #h1 {
   font-weight: 600;
   font-size: 2.6rem;

@@ -7,6 +7,8 @@ import "../style/gridStyle.css"
 import rehypeReact from "rehype-react"
 import { Typography } from "@material-ui/core"
 import BackButton from "../components/backButton"
+import Sponsors from "../elements/sponsors"
+import Main from "../elements/Main"
 
 function H1(props) {
   return (
@@ -64,7 +66,7 @@ export const videoTag = link => {
 
 export const renderAst = new rehypeReact({
   createElement: React.createElement,
-  components: { h1: H1, h2: H2, h3: H3, video: videoTag },
+  components: { h1: H1, h2: H2, h3: H3, video: videoTag, sponsors: Sponsors },
 }).Compiler
 
 type Props = {
@@ -88,17 +90,8 @@ export default class Template extends React.Component<Props> {
           ]}
           title={`${post.frontmatter.title} | Global Digital Library`}
         />
-        <main
-          style={{
-            marginLeft: "auto",
-            marginRight: "auto",
-            display: "flex",
-            width: "fit-content",
-            flex: "1 0 auto",
-            height: "fit-content",
-          }}
-        >
-          <div className="news-grid">
+        <main className="container">
+          <Main>
             <div className="postContainer">
               <div style={{ paddingBottom: "20px", fontStyle: "italic" }}>
                 {post.frontmatter.date !== "Invalid date"
@@ -108,7 +101,7 @@ export default class Template extends React.Component<Props> {
               {renderAst(post.htmlAst)}
               <BackButton />
             </div>
-          </div>
+          </Main>
         </main>
       </Layout>
     )

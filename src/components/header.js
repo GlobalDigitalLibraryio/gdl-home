@@ -15,6 +15,7 @@ import {
 import MenuIcon from "@material-ui/icons/Menu"
 import gdlLogo from "../images/GDL-logo.svg"
 import "../style/headerStyle.css"
+import { Link } from "gatsby"
 
 type State = {
   left: boolean,
@@ -100,18 +101,21 @@ class Header extends React.Component<Props, State> {
           position="sticky"
         >
           <Toolbar>
-            <img
-              src={gdlLogo}
-              style={{
-                marginTop: 2,
-                marginBottom: 0,
-                height: 36,
-                width: 100,
-                marginLeft: 15,
-              }}
-              aria-hidden
-              alt="logo"
-            />
+            <Link to="/" className="logo" aria-label="Global Digital Library">
+              <img
+                src={gdlLogo}
+                style={{
+                  marginTop: 2,
+                  marginBottom: 0,
+                  height: 36,
+                  width: 100,
+                  marginLeft: 15,
+                }}
+                aria-hidden
+                alt="logo"
+              />
+            </Link>
+
             <Typography variant="h6" style={{ flexGrow: 1 }}></Typography>
             <Button
               color="inherit"
