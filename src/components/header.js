@@ -31,25 +31,14 @@ const menuItemActive = {
   textDecoration: "underline",
 }
 
+const BLOG_URL = "https://blog.digitallibrary.io/"
+
 class Header extends React.Component<Props, State> {
   state = {
     left: false,
   }
   render() {
     const { path } = this.props
-    let blogPath
-    const env = process.env.GATSBY_GDL_ENVIRONMENT || "development"
-    switch (env) {
-      case "development":
-        blogPath = "http://localhost:8000/"
-        break
-      case "prod":
-        blogPath = "https://blog.digitallibrary.io/"
-        break
-      default:
-        blogPath = `https://blog.${env}.digitallibrary.io/`
-        break
-    }
     const toggleDrawer = open => event => {
       if (
         event &&
@@ -74,7 +63,7 @@ class Header extends React.Component<Props, State> {
               <ListItemText primary="Home" />
             </ListItem>
           </a>
-          <a className="smlHeaderLink" href={blogPath}>
+          <a className="smlHeaderLink" href={BLOG_URL}>
             <ListItem button key="blogBtn">
               <ListItemText primary="Blog" />
             </ListItem>
@@ -131,7 +120,7 @@ class Header extends React.Component<Props, State> {
             >
               Home
             </Button>
-            <Button color="inherit" style={menuItemStyle} href={blogPath}>
+            <Button color="inherit" style={menuItemStyle} href={BLOG_URL}>
               Blog
             </Button>
             <Button

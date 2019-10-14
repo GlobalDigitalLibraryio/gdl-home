@@ -17,25 +17,10 @@ import Cover from "../elements/Cover"
 import Sponsors from "../elements/sponsors"
 import "../Style/indexStyle.css"
 
+const BLOG_URL = "https://blog.digitallibrary.io/"
+const DIGITAL_LIBRARY_URL = "https://digitallibrary.io/"
 export default class Index extends React.Component {
   render() {
-    let blogPath
-    let gdlFrontendPath
-    const env = process.env.GATSBY_GDL_ENVIRONMENT || "development"
-    switch (env) {
-      case "development":
-        blogPath = "http://localhost:8000/"
-        gdlFrontendPath = "http://localhost:8000/"
-        break
-      case "prod":
-        blogPath = "https://blog.digitallibrary.io/"
-        gdlFrontendPath = "https://digitallibrary.io/"
-        break
-      default:
-        blogPath = `https://blog.${env}.digitallibrary.io/`
-        gdlFrontendPath = `https://${env}.digitallibrary.io/`
-        break
-    }
     return (
       <Layout path="/">
         <SEO title="Home" />
@@ -59,7 +44,7 @@ export default class Index extends React.Component {
                 <Button
                   id="coverBtnLink"
                   variant="outlined"
-                  href={gdlFrontendPath}
+                  href={DIGITAL_LIBRARY_URL}
                 >
                   START READING
                 </Button>
@@ -172,7 +157,7 @@ export default class Index extends React.Component {
                     </Typography>
                   </div>
                   <p style={{ marginLeft: "auto", marginRight: "auto" }}>
-                    <Button id="blogBtnLink" variant="outlined" href={blogPath}>
+                    <Button id="blogBtnLink" variant="outlined" href={BLOG_URL}>
                       Visit the blog
                     </Button>
                   </p>

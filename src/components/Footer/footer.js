@@ -6,20 +6,9 @@ import TwitterIcon from "./TwitterIcon"
 import YoutubeIcon from "./YoutubeIcon"
 import "../../style/footerStyle.css"
 
+const BLOG_URL = "https://blog.digitallibrary.io/"
+
 const Footer = () => {
-  let blogPath
-  const env = process.env.GATSBY_GDL_ENVIRONMENT || "development"
-  switch (env) {
-    case "development":
-      blogPath = "http://localhost:8000/"
-      break
-    case "prod":
-      blogPath = "https://blog.digitallibrary.io/"
-      break
-    default:
-      blogPath = `https://blog.${env}.digitallibrary.io/`
-      break
-  }
   return (
     <div id="footerContainer">
       <footer id="footerId">
@@ -43,7 +32,7 @@ const Footer = () => {
             <a href="/about">About</a>
           </div>
           <div>
-            <a href={blogPath}>Blog</a>
+            <a href={BLOG_URL}>Blog</a>
           </div>
         </ul>
 
