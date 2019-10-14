@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
@@ -17,6 +17,8 @@ import Cover from "../elements/Cover"
 import Sponsors from "../elements/sponsors"
 import "../Style/indexStyle.css"
 
+const BLOG_URL = "https://blog.digitallibrary.io/"
+const DIGITAL_LIBRARY_URL = "https://digitallibrary.io/"
 export default class Index extends React.Component {
   render() {
     return (
@@ -42,7 +44,7 @@ export default class Index extends React.Component {
                 <Button
                   id="coverBtnLink"
                   variant="outlined"
-                  href="https://digitallibrary.io/"
+                  href={DIGITAL_LIBRARY_URL}
                 >
                   START READING
                 </Button>
@@ -155,11 +157,7 @@ export default class Index extends React.Component {
                     </Typography>
                   </div>
                   <p style={{ marginLeft: "auto", marginRight: "auto" }}>
-                    <Button
-                      id="blogBtnLink"
-                      variant="outlined"
-                      href="https://blog.digitallibrary.io/"
-                    >
+                    <Button id="blogBtnLink" variant="outlined" href={BLOG_URL}>
                       Visit the blog
                     </Button>
                   </p>

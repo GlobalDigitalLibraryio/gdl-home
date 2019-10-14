@@ -1,5 +1,5 @@
 //@flow
-import React from "react"
+import * as React from "react"
 import {
   AppBar,
   Toolbar,
@@ -22,6 +22,16 @@ type State = {
 type Props = {
   path: string,
 }
+
+const menuItemStyle = {
+  color: "white",
+}
+const menuItemActive = {
+  color: "white",
+  textDecoration: "underline",
+}
+
+const BLOG_URL = "https://blog.digitallibrary.io/"
 
 class Header extends React.Component<Props, State> {
   state = {
@@ -53,7 +63,7 @@ class Header extends React.Component<Props, State> {
               <ListItemText primary="Home" />
             </ListItem>
           </a>
-          <a className="smlHeaderLink" href="https://blog.digitallibrary.io/">
+          <a className="smlHeaderLink" href={BLOG_URL}>
             <ListItem button key="blogBtn">
               <ListItemText primary="Blog" />
             </ListItem>
@@ -103,35 +113,40 @@ class Header extends React.Component<Props, State> {
               alt="logo"
             />
             <Typography variant="h6" style={{ flexGrow: 1 }}></Typography>
-            <a
-              id="homeHref"
-              className={path === "/" ? "active" : "headerLink"}
+            <Button
+              color="inherit"
+              style={path === "/" ? menuItemActive : menuItemStyle}
               href="/"
             >
-              <Button color="inherit">Home</Button>
-            </a>
-            <a className="headerLink" href="https://blog.digitallibrary.io/">
-              <Button color="inherit">Blog</Button>
-            </a>
-            <a
-              className={path === "/about" ? "active" : "headerLink"}
+              Home
+            </Button>
+            <Button color="inherit" style={menuItemStyle} href={BLOG_URL}>
+              Blog
+            </Button>
+            <Button
+              color="inherit"
+              style={path === "/about" ? menuItemActive : menuItemStyle}
               href="/about"
             >
-              <Button color="inherit">About</Button>
-            </a>
-            <a
-              className="headerLink"
+              About
+            </Button>
+            <Button
+              color="inherit"
+              style={menuItemStyle}
               href="https://digitallibrary.zendesk.com/hc/en-us/requests/new"
             >
-              <Button color="inherit">Contact</Button>
-            </a>
-            <a
-              id="gdlNewsHref"
-              className={path === "/gdl-in-the-news" ? "active" : "headerLink"}
+              Contact
+            </Button>
+
+            <Button
+              color="inherit"
+              style={
+                path === "/gdl-in-the-news" ? menuItemActive : menuItemStyle
+              }
               href="/gdl-in-the-news"
             >
-              <Button color="inherit">GDL in the news</Button>
-            </a>
+              GDL in the news
+            </Button>
           </Toolbar>
         </AppBar>
 

@@ -1,9 +1,8 @@
-import React from "react"
+import * as React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import favicon from "../images/favicon.png"
 import Helmet from "react-helmet"
-import Main from "../elements/Main"
 import "../style/gridStyle.css"
 import rehypeReact from "rehype-react"
 import { Typography } from "@material-ui/core"
@@ -37,7 +36,7 @@ export const videoTag = link => {
       style={{
         position: "relative",
         width: "100%",
-        padding: "30%",
+        paddingTop: "56.25%",
         marginLeft: "0",
         marginRight: "0",
       }}
@@ -96,11 +95,10 @@ export default class Template extends React.Component<Props> {
             display: "flex",
             width: "fit-content",
             flex: "1 0 auto",
-            boxShadow: "0px 0px 40px 0px rgba(0, 0, 0, 0.2)",
             height: "fit-content",
           }}
         >
-          <Main>
+          <div className="news-grid">
             <div className="postContainer">
               <div style={{ paddingBottom: "20px", fontStyle: "italic" }}>
                 {post.frontmatter.date !== "Invalid date"
@@ -110,7 +108,7 @@ export default class Template extends React.Component<Props> {
               {renderAst(post.htmlAst)}
               <BackButton />
             </div>
-          </Main>
+          </div>
         </main>
       </Layout>
     )

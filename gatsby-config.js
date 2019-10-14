@@ -1,7 +1,6 @@
 module.exports = {
   siteMetadata: {
     title: `Global Digital Library`,
-    zendeskUrl: "https://digitallibrary.zendesk.com/hc/en-us/requests/new",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
