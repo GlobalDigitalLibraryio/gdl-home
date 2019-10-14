@@ -25,8 +25,7 @@ td:first-child {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 100%;
-  padding: 70px 30px;
+  padding: 10px 30px;
   line-height: 1.7;
   font-size: 1rem;
   font-family: Lato, Roboto, sans-serif;
@@ -51,6 +50,20 @@ td:first-child {
   }
   .pageContent {
     padding: 50px 120px;
+  }
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.2);
+  height: fit-content;
+}
+
+@media (min-width: 600px) {
+  .container {
+    width: fit-content;
   }
 }
 

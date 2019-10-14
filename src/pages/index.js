@@ -15,7 +15,6 @@ import {
 import Main from "../elements/Main"
 import Cover from "../elements/Cover"
 import Sponsors from "../elements/sponsors"
-import "../Style/indexStyle.css"
 
 const BLOG_URL = "https://blog.digitallibrary.io/"
 const DIGITAL_LIBRARY_URL = "https://digitallibrary.io/"
