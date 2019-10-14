@@ -164,18 +164,20 @@ class Header extends React.Component<Props, State> {
               <IconButton color="inherit" onClick={toggleDrawer(true)}>
                 <MenuIcon style={{ color: "white" }} />
               </IconButton>
-              <img
-                src={gdlLogo}
-                style={{
-                  marginTop: 2,
-                  marginBottom: 0,
-                  height: 36,
-                  width: 100,
-                  marginLeft: 15,
-                }}
-                aria-hidden
-                alt="logo"
-              />
+              <Link to="/" className="logo" aria-label="Global Digital Library">
+                <img
+                  src={gdlLogo}
+                  style={{
+                    marginTop: 2,
+                    marginBottom: 0,
+                    height: 36,
+                    width: 100,
+                    marginLeft: 15,
+                  }}
+                  aria-hidden
+                  alt="logo"
+                />
+              </Link>
             </Toolbar>
           </AppBar>
           <SwipeableDrawer
